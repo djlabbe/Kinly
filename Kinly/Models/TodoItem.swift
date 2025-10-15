@@ -8,6 +8,8 @@ final class TodoItem {
     var isCompleted: Bool?
     var createdAt: Date?
     
+    @Relationship var todoList: TodoList?
+    
     init(id: UUID = UUID(), title: String, isCompleted: Bool = false, createdAt: Date = Date()) {
         self.id = id
         self.title = title

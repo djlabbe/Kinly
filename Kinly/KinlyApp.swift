@@ -5,6 +5,7 @@ import SwiftData
 struct KinlyApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
+            TodoList.self,
             TodoItem.self,
         ])
         let modelConfiguration = ModelConfiguration(
@@ -22,7 +23,7 @@ struct KinlyApp: App {
 
     var body: some Scene {
         WindowGroup {
-            TodoListView()
+            ListsView()
         }
         .modelContainer(sharedModelContainer)
     }
